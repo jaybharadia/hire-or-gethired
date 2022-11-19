@@ -1,8 +1,2 @@
 @import "./base.css";
 @import "./tailwind.css";
-#app {
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
-}
