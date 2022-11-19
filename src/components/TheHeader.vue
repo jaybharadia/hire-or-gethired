@@ -4,8 +4,8 @@
     <nav class="flex justify-between">
       <div class="flex items-center space-x-3 lg:pr-16 pr-6">
         <img
-          class="cursor-pointer dark:bg-white p-1 rounded-full"
-          src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-1-svg1.svg"
+          class="cursor-pointer dark:bg-white p-1 rounded-full max-w-[50px]"
+          src="@/assets/images/logo.png"
           alt="circle"
         />
         <h2
