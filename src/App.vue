@@ -1,17 +1,50 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterLink, RouterView } from "vue-router";
+import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <img
+      alt="Vue logo"
+      class="logo"
+      src="@/assets/logo.svg"
+      width="125"
+      height="125"
+    />
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
+        <h3 class="text-primary-800 text-lg">HOME</h3>
+
+        <div class="bg-secondary-300">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
+          aliquam facilis officiis eum dolor, accusamus soluta deleniti. Autem
+          natus eum nulla totam amet temporibus fugiat, modi quas alias, saepe
+          minima enim reprehenderit perferendis magnam, voluptate qui beatae ab
+          sequi eius harum iusto nemo inventore optio repellat! Facilis numquam
+          molestias impedit temporibus accusamus alias, eius placeat explicabo
+          quod voluptates, culpa eum nemo! Assumenda in, voluptate possimus
+          quasi sed magnam. Ea inventore optio, velit, doloremque commodi
+          dolores et deserunt fuga explicabo laudantium itaque reprehenderit
+          recusandae fugit accusamus cum consequuntur magnam omnis facere at
+          ratione veniam repudiandae tenetur voluptatum. Omnis voluptas
+          laudantium ut labore, nihil adipisci illo, voluptatibus inventore
+          nesciunt, voluptatum ea eius excepturi quibusdam repellat sequi nobis!
+          Nobis voluptate iste minus velit excepturi sit veritatis odio
+          assumenda magnam consequuntur optio quod accusamus esse facilis nam
+          reprehenderit natus nulla, facere, tempore rem earum tenetur! Beatae
+          quos laboriosam doloremque illo reiciendis nesciunt id praesentium,
+          velit, possimus, fugit iusto fuga voluptatibus consectetur vitae
+          reprehenderit eius officia laudantium facere ad? Dolor soluta dolorum
+          maiores alias, unde laudantium, ipsum adipisci quas rerum sed ea
+          repellendus impedit velit in quo cupiditate iusto eos amet nostrum
+          accusantium. Velit dolorem quis accusamus laudantium rerum magnam
+          laboriosam aliquid fugit animi delectus?
+        </div>
+        <!-- <RouterLink to="/" class="text-sky-500 text-lg">Home</RouterLink> -->
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
