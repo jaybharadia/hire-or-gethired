@@ -34,7 +34,7 @@
         <li
           v-for="(menuItem, index) in $options.menu"
           :key="index"
-          @click="selected"
+          @click="selected($event, menuItem)"
           class="focus:outline-none flex items-center focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 border border-white bg-gray-50 cursor-pointer px-3 font-normal text-xs shadow-md rounded"
         >
           {{ menuItem.label }}
@@ -99,7 +99,7 @@
           <li
             v-for="(menuItem, index) in $options.menu"
             :key="index"
-            @click="selectedSmall"
+            @click="selectedSmall($event, menuItem)"
             class="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs font-normal focus:text-black"
           >
             {{ menuItem.label }}
@@ -116,14 +116,16 @@ export default {
   menu: [
     {
       label: "Login",
+      href: { path: "/login" },
     },
     {
       label: "Sign up",
+      href: { path: "/signup" },
     },
   ],
   methods: {
-    selected(event) {
-      console.log("inside selected ");
+    selected(event, menuItem) {
+      if (menuItem.href) this.$router.push(menuItem.href);
 
       var targeted = event.target;
       var clicked = targeted.parentElement;
@@ -153,8 +155,8 @@ export default {
       targeted.classList.add("text-white", "bg-primary-600");
     },
 
-    selectedSmall(event) {
-      console.log("inside select small ");
+    selectedSmall(event, menuItem) {
+      if (menuItem.href) this.$router.push(menuItem.href);
 
       var targeted = event.target;
       var clicked = targeted.parentElement;

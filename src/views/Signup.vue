@@ -16,18 +16,24 @@
           tabindex="0"
           class="focus:outline-none text-2xl font-extrabold leading-6 text-gray-800"
         >
-          Login to your account
+          Signup to your account
         </p>
         <p
           tabindex="0"
           class="focus:outline-none text-sm mt-4 font-medium leading-none text-gray-500"
         >
-          Dont have account?
-          <a
+          Already have account?
+          <!-- <a
             href="javascript:void(0)"
             class="hover:text-gray-500 focus:text-gray-500 focus:outline-none focus:underline hover:underline text-sm font-medium leading-none text-gray-800 cursor-pointer"
           >
-            Sign up here</a
+            Login here</a
+          > -->
+
+          <router-link
+            :to="{ path: '/login' }"
+            class="hover:text-gray-500 focus:text-gray-500 focus:outline-none focus:underline hover:underline text-sm font-medium leading-none text-gray-800 cursor-pointer"
+            >Login here</router-link
           >
         </p>
         <button
@@ -40,7 +46,7 @@
             alt="google"
           />
           <p class="text-base font-medium ml-4 text-gray-700">
-            Continue with Google
+            Signup with Google
           </p>
         </button>
         <button
@@ -53,7 +59,7 @@
             alt="github"
           />
           <p class="text-base font-medium ml-4 text-gray-700">
-            Continue with Github
+            Signup with Github
           </p>
         </button>
         <button
@@ -66,7 +72,7 @@
             alt="twitter"
           />
           <p class="text-base font-medium ml-4 text-gray-700">
-            Continue with Twitter
+            Signup with Twitter
           </p>
         </button>
         <div class="w-full flex items-center justify-between py-5">
@@ -84,7 +90,7 @@
           <input
             aria-labelledby="email"
             type="email"
-            class="bg-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2 focus:ring-2 focus:ring-offset-2 focus:ring-primary-700 focus:outline-none focus:bg-white"
+            class="bg-gray-200 border rounded text-xs font-medium leading-none focus:bg-white text-gray-800 py-3 w-full pl-3 mt-2 focus:ring-2 focus:ring-offset-2 focus:ring-primary-700 focus:outline-none"
           />
         </div>
         <div class="mt-6 w-full">
@@ -98,7 +104,7 @@
             <input
               id="pass"
               type="password"
-              class="bg-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2 focus:ring-2 focus:ring-offset-2 focus:ring-primary-700 focus:outline-none focus:bg-white"
+              class="bg-gray-200 border rounded text-xs font-medium leading-none focus:bg-white text-gray-800 py-3 w-full pl-3 mt-2 focus:ring-2 focus:ring-offset-2 focus:ring-primary-700 focus:outline-none"
             />
             <div class="absolute right-0 mt-2 mr-3 cursor-pointer">
               <img
@@ -108,18 +114,36 @@
             </div>
           </div>
         </div>
+
+        <div class="mt-6 w-full">
+          <label
+            for="pass"
+            class="text-sm font-medium leading-none text-gray-800"
+          >
+            Confirm Password
+          </label>
+          <div class="relative flex items-center justify-center">
+            <input
+              id="pass"
+              type="password"
+              class="bg-gray-200 border rounded text-xs font-medium leading-none focus:bg-white text-gray-800 py-3 w-full pl-3 mt-2 focus:ring-2 focus:ring-offset-2 focus:ring-primary-700 focus:outline-none"
+            />
+            <div class="absolute right-0 mt-2 mr-3 cursor-pointer">
+              <img
+                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sign_in-svg5.svg"
+                alt="viewport"
+              />
+            </div>
+          </div>
+        </div>
+
         <div class="mt-8">
           <button
             role="button"
             class="focus:ring-2 focus:ring-offset-2 focus:ring-primary-700 text-sm font-semibold leading-none text-white focus:outline-none bg-primary-700 border rounded hover:bg-primary-600 py-4 w-full"
           >
-            Login
+            Create my account
           </button>
-          <p class="text-gray-700 font-semibold mt-2">
-            <router-link :to="{ path: '/forgot-password' }">
-              Forgot Password?
-            </router-link>
-          </p>
         </div>
       </div>
     </div>
@@ -130,8 +154,4 @@
 export default {};
 </script>
 
-<style lang="scss">
-.login-screen {
-  height: calc(100vh - 90px);
-}
-</style>
+<style lang="scss" scoped></style>
